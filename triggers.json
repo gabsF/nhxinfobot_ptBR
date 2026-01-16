@@ -12,7 +12,7 @@
     "response4": {
         "triggers": ["arguing"],
         "text": "",
-        "files": ["media/arguing.mp4"]
+        "files": "https://metriccepheid.online/media/arguing.mp4"
     },
     "response10": {
         "triggers": ["encore"],
@@ -22,12 +22,12 @@
     "response15": {
         "triggers": ["hammers"],
         "text": "",
-        "files": ["media/hammers.mp4"]
+        "files": "https://metriccepheid.online/media/hammers.mp4"
     },
     "response19": {
         "triggers": ["lore"],
         "text": "",
-        "files": ["media/lore.mov"]
+        "files": "https://metriccepheid.online/media/lore.mov"
     },
     "response24": {
         "triggers": ["nautilus", "c3contools", "c3tools"],
@@ -68,12 +68,12 @@
     "response41": {
         "triggers": ["poop", "focus"],
         "text": "",
-        "files": ["media/focus.mp4"]
+        "files": "https://metriccepheid.online/media/focus.mp4"
     },
     "response42": {
         "triggers": ["hiring"],
         "text": "",
-        "files": ["media/focus-1.mp4"]
+        "files": "https://metriccepheid.online/media/focus-1.mp4"
     },
     "response44": {
         "triggers": ["themeats", "meat", "meats", "arbys", "arbyshasthemeats"],
@@ -88,7 +88,7 @@
     "response46": {
         "triggers": ["usher"],
         "text": "",
-        "files": ["media/usher_1.mp4"]
+        "files": "https://metriccepheid.online/media/usher_1.mp4"
     },
     "response47": {
         "triggers": ["usrdir"],
@@ -108,7 +108,7 @@
     "response51": {
         "triggers": ["piss"],
         "text": "",
-        "files": ["media/piss.mp4"]
+        "files": "https://metriccepheid.online/media/piss.mp4"
     },
     "response52": {
         "triggers": ["rb3decomp"],
@@ -123,17 +123,17 @@
     "response62": {
         "triggers": ["fig"],
         "text": "",
-        "files": ["media/fig.mp4"]
+        "files": "https://metriccepheid.online/media/fig.mp4"
     },
     "response68": {
         "triggers": ["milk"],
         "text": "",
-        "files": ["media/milk.mp4"]
+        "files": "https://metriccepheid.online/media/milk.mp4"
     },
     "response69": {
         "triggers": ["pr"],
         "text": "",
-        "files": ["media/plsapprovepr.mp4"]
+        "files": "https://metriccepheid.online/media/plsapprovepr.mp4"
     },
     "response71": {
         "triggers": ["goodluck"],
@@ -173,7 +173,7 @@
     "response87": {
         "triggers": ["touchgrass", "grass"],
         "text": "",
-        "files": ["media/grass.mp4"]
+        "files": "https://metriccepheid.online/media/grass.mp4"
     },
     "response90": {
         "triggers": ["milohax", "harmonix", "hmx", "mhx"],
@@ -188,7 +188,7 @@
     "response94": {
         "triggers": ["leakers"],
         "text": "",
-        "files": ["media/leakers.mp4"]
+        "files": "https://metriccepheid.online/media/leakers.mp4"
     },
     "response95": {
         "triggers": ["rcm"],
@@ -218,17 +218,17 @@
     "response108": {
         "triggers": ["modern", "moderngaming", "dogshit"],
         "text": "",
-        "files": ["media/dogshit.mp4"]
+        "files": "https://metriccepheid.online/media/dogshit.mp4"
     },
     "response109": {
         "triggers": ["fogjuicerb3"],
         "text": "",
-        "files": ["media/here_come_the_fog_juice.mov"]
+        "files": "https://metriccepheid.online/media/here_come_the_fog_juice.mov"
     },
     "response110": {
         "triggers": ["fogjuice", "fog", "vape"],
         "text": "",
-        "files": ["media/fog.mp4"]
+        "files": "https://metriccepheid.online/media/fog.mp4"
     },
     "response111": {
     	"triggers": ["ping"],
@@ -244,7 +244,7 @@
     },
     "response114": {
     	"triggers": ["alltaps", "kbstrum", "forcetaps"],
-    	"text": "If you want to play BetterGH3 or GH3+ PC with your keyboard, you are required to place this file into the **PLUGINS** folder.",
+    	"text": "If you want to play BetterGH3 or GH3+ PC with your keyboard, download this `.dll file` and drag it into the `PLUGINS` folder.\n-# [tapplugin.gif](https://metriccepheid.online/media/tapplugin.gif)",
     	"files": ["media/ForceTapNotes.dll"]
     },
     "response115": {

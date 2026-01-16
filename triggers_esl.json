@@ -19,13 +19,13 @@
     },
     "response38": {
         "triggers": ["skillissue", "calibration", "calibrating", "calibrate"],
-        "text": "-# **NEEDS TO BE TRANSLATED**"
+        "text": "No es posible calibrar automáticamente en BetterGH3 por culpa de separar la calibración de audio y vídeo.\nNecesitas calibrar manualmente.\nRecuerda:\n* Si pega abajo de la linea = esta muy alta\n* Si pega arriba de la linea = esta muy baja."
     },
     "response41": {
         "triggers": ["poop", "caca"],
         "text": "",
         "link": "response41",
-        "files": ["media/caca.mp4"]
+        "text": "https://metriccepheid.online/media/caca.mp4"
     },
     "response44": {
         "triggers": ["themeats", "meat", "meats", "arbys", "arbyshasthemeats"],
@@ -47,7 +47,7 @@
     },
     "response50": {
         "triggers": ["xenia"],
-        "text": "-# **NEEDS TO BE TRANSLATED**",
+        "text": "Xenia no es recomendado porque tiene varios problemas con sincronización.",
         "link": "response50",
         "files": []
     },
@@ -65,15 +65,15 @@
     },
     "response90": {
         "triggers": ["milohax", "harmonix", "hmx", "mhx"],
-        "text": "-# **NEEDS TO BE TRANSLATED**",
+        "text": "## MiloHax\nQuieres mods para Guitar Hero de Harmonix o Rock Band?\nÚnete al Discord de MiloHax aquí:\nhttps://discord.gg/milohax",
         "link": "response90",
         "files": []
     },
     "response114": {
-    	"triggers": ["alltaps", "kbstrum", "forcetaps"],
-    	"text": "-# **NEEDS TO BE TRANSLATED**",
-    	"link": "response114",
-    	"files": []
+        "triggers": ["alltaps", "kbstrum", "forcetaps"],
+        "text": "Si quieres jugar BetterGH3 o GH3+ con un teclado, descarga y coloca este archivo `.dll` a la carpeta de `PLUGINS`.",
+        "link": "response114",
+        "files": ["https://metriccepheid.online/media/tapplugin.gif", "media/ForceTapNotes.dll"]
     }
 }
 
