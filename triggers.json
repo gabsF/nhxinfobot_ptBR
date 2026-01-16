@@ -244,6 +244,10 @@
         "triggers": ["fogjuice", "fog", "vape"],
         "text": "",
         "files": ["media/fog.mp4"]
+    },
+    "response111": {
+    	"triggers": ["ping"],
+    	"text": "pong!"
     }
 }
 

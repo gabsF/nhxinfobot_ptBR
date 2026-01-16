@@ -74,18 +74,6 @@
         "text": "-# **NEEDS TO BE TRANSLATED**",
         "link": "response90",
         "files": []
-    },
-    "response93": {
-        "triggers": ["syntax", "sintaxis"],
-        "text": "Encuentra el Sintaxis de DTA para tu editor preferido.\n<https://github.com/hmxmilohax/tools/tree/main/syntax>",
-        "link": "response93",
-        "files": []
-    },
-    "response100": {
-        "triggers": ["bestbuild", "versionvieja"],
-        "text": "Algunas actualizaciones de RPCS3 tiene peor rendimiento. Si tenias mejor rendimiento, antes, puedes intentar una version mas vieja. Instalala sobre la instalacion que tienes.\n- [[Windows]](https://github.com/RPCS3/rpcs3-binaries-win/releases/download/build-0e1cad4ca9bbd7b5aaf315a3a11d0eb3c344a0a8/rpcs3-v0.0.36-17840-0e1cad4c_win64.7z)\n- [[Linux x86]](https://github.com/RPCS3/rpcs3-binaries-linux/releases/download/build-0e1cad4ca9bbd7b5aaf315a3a11d0eb3c344a0a8/rpcs3-v0.0.36-17840-0e1cad4c_linux64.AppImage)\n- [[Linux ARM]](https://github.com/RPCS3/rpcs3-binaries-linux-arm64/releases/download/build-0e1cad4ca9bbd7b5aaf315a3a11d0eb3c344a0a8/rpcs3-v0.0.36-17840-0e1cad4c_linux_aarch64.AppImage)\n- [[macOS x86]](https://github.com/RPCS3/rpcs3-binaries-mac/releases/download/build-0e1cad4ca9bbd7b5aaf315a3a11d0eb3c344a0a8/rpcs3-v0.0.36-17840-0e1cad4c_macos.7z)\n- [[macOS ARM]](https://github.com/RPCS3/rpcs3-binaries-mac-arm64/releases/download/build-0e1cad4ca9bbd7b5aaf315a3a11d0eb3c344a0a8/rpcs3-v0.0.36-17840-0e1cad4c_macos_arm64.7z)",
-        "link": "response100",
-        "files": []
     }
 }
 
