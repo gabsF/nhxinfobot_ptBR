@@ -1,9 +1,4 @@
 {
-    "response1": {
-        "triggers": ["amp"],
-        "text": "https://youtu.be/d2RtmzUwxK0",
-        "files": []
-    },
     "response2": {
         "triggers": ["infobot"],
         "text": "# NeverHax Info Bot\nhttps://github.com/MetricCepheid/nhxinfobot",
@@ -144,11 +139,6 @@
         "triggers": ["pr"],
         "text": "",
         "files": ["media/plsapprovepr.mp4"]
-    },
-    "response70": {
-        "triggers": ["boardgame", "rbboardgame"],
-        "text": "",
-        "files": ["media/boardgame.webm", "media/boardgame.webp"]
     },
     "response71": {
         "triggers": ["goodluck"],
