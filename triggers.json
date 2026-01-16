@@ -24,11 +24,6 @@
         "text": "",
         "files": ["media/hammers.mp4"]
     },
-    "response18": {
-        "triggers": ["log", "logs"],
-        "text": "Error: User provided no rpcs3.log, to send a log:\n* **Boot the game** and run into the problem.\n* In the main RPCS3 window, click on `File` > `Exit and Save Log`. Save it somewhere convenient.\n* **Type `!log`** and upload the log to the chat.\n---\nIf you're running into hard crashes, **do not reopen RPCS3!**\nFind the `RPCS3.log` or `RPCS3.log.gz` file and send that.\n* On Windows, it's in the folder called `logs` in the folder you have RPCS3 in.\n* On Linux, it's in `~/.cache/rpcs3/logs`.\n* On macOS, it's in `~/Library/Caches/rpcs3/logs`. (May require you to show hidden folders)",
-        "files": ["media/savelog.gif"]
-    },
     "response19": {
         "triggers": ["lore"],
         "text": "",

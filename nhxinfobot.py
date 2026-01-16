@@ -4,7 +4,6 @@ import json
 import os
 import math
 import tempfile
-from analyze_log import analyze_log_file
 import gzip
 import shutil
 import urllib.request as urlreq
@@ -313,64 +312,6 @@ async def on_ready():
     print(f'Logged in as {client.user}!')
     check_actions_staleness.start()   # kick off the daily loop
 
-async def handle_log_file(message):
-    if len(message.attachments) == 0:
-        for response in triggers.values():
-            if any(trigger.lower() in message.content.lower() for trigger in response['triggers']):
-                await handle_response(message.channel, response)
-                break  # Stop after sending one trigger action
-        return
-
-    log_file = message.attachments[0]
-    session_hash = generate_session_hash()
-
-    # Check if the file is a valid log or gzipped log file
-    if not log_file.filename.endswith((".log", ".log.gz")):
-        await message.channel.send("Invalid file type. Please upload a `.log` or `.log.gz` file.")
-        return
-
-    # Generate a unique log file name by appending the session hash
-    log_file_name = f"{os.path.splitext(log_file.filename)[0]}_{session_hash}.log"
-    log_file_path = os.path.join(TEMP_FOLDER, log_file_name)
-
-    # Save the file to a temporary location
-    await log_file.save(log_file_path if not log_file.filename.endswith(".gz") else log_file_path + ".gz")
-
-    decompressed_log_path = log_file_path
-
-    # If the file is a .gz file, extract it
-    if log_file.filename.endswith(".gz"):
-        decompressed_log_path = log_file_path  # Remove ".gz" from the final path
-        with gzip.open(log_file_path + ".gz", 'rb') as f_in:
-            with open(decompressed_log_path, 'wb') as f_out:
-                shutil.copyfileobj(f_in, f_out)
-        os.remove(log_file_path + ".gz")  # Clean up the original .gz file after decompression
-
-    # Call the analyze_log_file function directly
-    try:
-        # Now analyze_log_file returns (summary, debug_txt_path)
-        summary, debug_txt = analyze_log_file(decompressed_log_path)
-
-        # Send the short summary as before
-        embed = discord.Embed(title="Log Analysis Result", color=discord.Color.blue())
-        embed.description = summary[:4096]
-        await message.channel.send(embed=embed)
-
-        # If we wrote out a debug file, upload it
-        if debug_txt:
-            await message.channel.send("Full debug info:", file=discord.File(debug_txt))
-            os.remove(debug_txt)
-
-    except Exception as e:
-        await message.channel.send(f"Error analyzing log file: {e}")
-
-    finally:
-        # Clean up the temporary directory
-        if os.path.exists(decompressed_log_path):
-            os.remove(decompressed_log_path)
-
-    return
-
 @client.event
 async def on_message(message):
     if message.author == client.user:
@@ -413,11 +354,6 @@ async def on_message(message):
                 if word.startswith(prefix):
                     command = word[len(prefix):].strip()
                     break
-
-            # Handle special commands like log
-            if command == 'log':
-                await handle_log_file(message)
-                return
 
             if command == 'actions':
                 await check_actions_staleness()  # manual trigger
