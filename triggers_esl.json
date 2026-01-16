@@ -76,7 +76,7 @@
         "files": []
     },
     "response114": {
-    	"triggers": ["alltaps", "kbstrum"],
+    	"triggers": ["alltaps", "kbstrum", "forcetaps"],
     	"text": "-# **NEEDS TO BE TRANSLATED**",
     	"link": "response114",
     	"files": []
