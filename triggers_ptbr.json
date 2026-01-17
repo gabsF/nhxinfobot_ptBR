@@ -1,4 +1,9 @@
 {
+	"response1": {
+		"triggers": ["spreadsheet", "clones", "clonespreadsheet"],
+		"text": "Check out this spreadsheet created by MetricCepheid that preserves old/new and other clones that may have never seen the light of day before.\n\nhttps://docs.google.com/spreadsheets/d/1dVs9DKb4bZKWIqGN1hhuxyi6499E9Ens_PYcIHPYii8/view",
+		"link": "response1"
+	},
     "response24": {
         "triggers": ["nautilus", "c3contools", "c3tools"],
         "text": "# Latest Nautilus\nGet it from [GitHub](<https://github.com/trojannemo/Nautilus/releases/latest>) or from [Nemo's Nautilus](<https://nemosnautilus.com/nautilus/>)\nJoin the Discord server here: https://discord.gg/ydGmRyKGVW",
