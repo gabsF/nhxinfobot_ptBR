@@ -232,7 +232,7 @@
     },
     "response111": {
     	"triggers": ["ping"],
-    	"text": "pong!"
+    	"text": "pong! (EN)"
     },
     "response112": {
     	"triggers": ["clones", "clonespreadsheet"],
@@ -253,7 +253,7 @@
     },
     "response116": {
         "triggers": ["ghpcsave"],
-        "text": "The GHPC save is located in this directory\n``C:\\Users\\<username>\\Documents\\Aspyr``"
+        "text": "The GH PC save is located in this directory\n``C:\\Users\\<username>\\Documents\\Aspyr``"
     }
 }
 

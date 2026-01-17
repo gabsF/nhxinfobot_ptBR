@@ -110,6 +110,9 @@ with open('triggers.json') as triggers_file:
 with open('triggers_esl.json') as triggers_esl_file:
     triggers_esl = json.load(triggers_esl_file)
 
+with open('triggers_ptbr.json') as triggers_ptbr_file:
+    triggers_ptbr = json.load(triggers_ptbr_file)
+
 # Build mapping from triggers to responses
 triggers_map = {}
 for response in triggers.values():
@@ -134,6 +137,27 @@ for response in triggers_esl.values():
             linked_response = triggers[linked_response_number]
             for trigger in linked_response['triggers']:
                 triggers_esl_map[trigger.lower()] = response
+        else:
+            print(f"Linked response number {linked_response_number} not found in English triggers.")
+
+# Build mapping from PT-BR triggers to responses
+triggers_ptbr_map = {}
+ptbr_triggers_with_exclamation_map = {}
+for response in triggers_ptbr.values():
+    for trigger in response['triggers']:
+        if trigger.startswith('!'):
+            # Remove '!' from the trigger
+            ptbr_triggers_with_exclamation_map[trigger[1:].lower()] = response
+        else:
+            triggers_ptbr_map[trigger.lower()] = response
+
+    # For linked triggers, map the linked English trigger to this response
+    if 'link' in response:
+        linked_response_number = response['link']
+        if linked_response_number in triggers:
+            linked_response = triggers[linked_response_number]
+            for trigger in linked_response['triggers']:
+                triggers_ptbr_map[trigger.lower()] = response
         else:
             print(f"Linked response number {linked_response_number} not found in English triggers.")
 
@@ -342,7 +366,7 @@ async def on_message(message):
     message_content_lower = message_content.lower()
 
     # List of valid prefixes
-    prefixes = ['!', '¡']
+    prefixes = ['!', '¡', '@']
 
     # Check for commands anywhere in the message
     words = message_content_lower.split()
@@ -371,12 +395,16 @@ async def on_message(message):
             # Now handle triggers
             if prefix in ['!']:
                 # Process English triggers
-                await process_trigger(message.channel, command, triggers_map, esl_triggers_with_exclamation_map)
+                await process_trigger(message.channel, command, triggers_map, esl_triggers_with_exclamation_map, ptbr_triggers_with_exclamation_map)
                 return  # Exit after processing a command
             elif prefix == '¡':
                 # Process ESL triggers
                 await process_esl_trigger(message.channel, command, triggers_esl_map)
                 return  # Exit after processing a command
+            elif prefix == '@':
+                # Process PT-BR triggers
+                await process_ptbr_trigger(message.channel, command, triggers_ptbr_map)
+                return # Exit after processing a command
 
 @tasks.loop(hours=24)
 async def check_actions_staleness():
@@ -460,7 +488,7 @@ async def check_actions_staleness():
 
     await channel.send(embed=embed)
 
-async def process_trigger(channel, command, triggers_map, esl_triggers_with_exclamation_map):
+async def process_trigger(channel, command, triggers_map, esl_triggers_with_exclamation_map, ptbr_triggers_with_exclamation_map):
     command_lower = command.lower()
 
     if command_lower in triggers_map:
@@ -473,8 +501,8 @@ async def process_trigger(channel, command, triggers_map, esl_triggers_with_excl
         await handle_response(channel, response)
         return
 
-    if command_lower in triggers_esl_map:
-        response = triggers_esl_map[command_lower]
+    if command_lower in ptbr_triggers_with_exclamation_map:
+        response = ptbr_triggers_with_exclamation_map[command_lower]
         await handle_response(channel, response)
         return
 
@@ -489,6 +517,16 @@ async def process_esl_trigger(channel, command, triggers_esl_map):
         return
 
     print(f"Command '¡{command}' not found.")
+
+async def process_ptbr_trigger(channel, command, triggers_ptbr_map):
+    command_lower = command.lower()
+
+    if command_lower in triggers_ptbr_map:
+        response = triggers_ptbr_map[command_lower]
+        await handle_response(channel, response)
+        return
+
+    print(f"Command '@{command}' not found.")
 
 async def send_trigger_list(channel, user_id):
     # Collect English triggers and aliases

@@ -25,7 +25,7 @@
     },
     "response38": {
         "triggers": ["skillissue", "calibration", "calibrating", "calibrate"],
-        "text": "No es posible calibrar automÃ¡ticamente en BetterGH3 por culpa de separar la calibraciÃ³n de audio y vÃ­deo.\nNecesitas calibrar manualmente.\nRecuerda:\n* Si pega abajo de la linea = esta muy alta\n* Si pega arriba de la linea = esta muy baja."
+        "text": "No es posible calibrar automáticamente en BetterGH3 por culpa de separar la calibración de audio y vídeo.\nNecesitas calibrar manualmente.\nRecuerda:\n* Si pega abajo de la linea = esta muy alta\n* Si pega arriba de la linea = esta muy baja."
     },
     "response41": {
         "triggers": ["poop", "caca"],
@@ -53,7 +53,7 @@
     },
     "response50": {
         "triggers": ["xenia"],
-        "text": "Xenia no es recomendado porque tiene varios problemas con sincronizaciÃ³n.",
+        "text": "Xenia no es recomendado porque tiene varios problemas con sincronización.",
         "link": "response50",
         "files": []
     },
@@ -71,7 +71,7 @@
     },
     "response90": {
         "triggers": ["milohax", "harmonix", "hmx", "mhx"],
-        "text": "## MiloHax\nQuieres mods para Guitar Hero de Harmonix o Rock Band?\nÃšnete al Discord de MiloHax aquÃ­:\nhttps://discord.gg/milohax",
+        "text": "## MiloHax\nQuieres mods para Guitar Hero de Harmonix o Rock Band?\nÚnete al Discord de MiloHax aquí:\nhttps://discord.gg/milohax",
         "link": "response90",
         "files": []
     },
@@ -83,7 +83,7 @@
     },
     "response116": {
         "triggers": ["ghpcsave", "ghpcpartida", "save", "partida"],
-        "text": "Las partidas para los juegos de Guitar Hero en PC estÃ¡n en esta direcciÃ³n:\n``C:\\Usuario\\<usuario>\\Documentos\\Aspyr``",
+        "text": "Las partidas para los juegos de Guitar Hero en PC están en esta dirección:\n``C:\\Usuario\\<usuario>\\Documentos\\Aspyr``",
         "link": "response116"
     }
 }
